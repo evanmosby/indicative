@@ -36,4 +36,4 @@ PLazy.prototype.catch = function (onRejected) {
   return this._promise.catch(onRejected)
 }
 
-export default PLazy
+module.exports = PLazy

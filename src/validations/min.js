@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the length of a string or array is not is not less than
@@ -19,7 +19,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [minLength], get) => {
+module.export = (data, field, message, [minLength], get) => {
   return toPromise(() => {
     if (!minLength) {
       throw new Error('min:make sure to define min length')

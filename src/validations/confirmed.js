@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import same from '../raw/same'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const same = require('../raw/same')
 
 /**
  * Ensures a field value as confirmed using a `_confirmation` convention. This is
@@ -24,7 +24,7 @@ import same from '../raw/same'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !same(fieldValue, get(data, `${field}_confirmation`))) {

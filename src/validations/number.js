@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import isNumber from '../raw/isNumber'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const isNumber = require('../raw/isNumber')
 
 /**
  * Makes sure that the value of field under validation is a valid
@@ -22,7 +22,7 @@ import isNumber from '../raw/isNumber'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     const transformedValue = typeof (fieldValue) === 'string' ? Number(fieldValue) : fieldValue

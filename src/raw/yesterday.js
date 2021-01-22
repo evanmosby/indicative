@@ -1,1 +1,1 @@
-export { default } from 'date-fns/is_yesterday'
+module.exports = require('date-fns/is_yesterday')

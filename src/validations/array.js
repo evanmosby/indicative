@@ -1,5 +1,5 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
 
 /**
  * Ensure the value is a valid array. Also this validation will never
@@ -19,7 +19,7 @@ import toPromise from '../../lib/toPromise'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !Array.isArray(fieldValue)) {

@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import empty from '../raw/empty'
-import existy from '../raw/existy'
+const toPromise = require('../../lib/toPromise')
+const empty = require('../raw/empty')
+const existy = require('../raw/existy')
 
 /**
  * Ensures the field is required when all other fields have non-empty values.
@@ -19,7 +19,7 @@ import existy from '../raw/existy'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const missingAnyField = args.some((item) => !existy(get(data, item)))
     if (!missingAnyField && empty(get(data, field))) {

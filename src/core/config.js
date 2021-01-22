@@ -9,7 +9,7 @@
 * file that was distributed with this source code.
 */
 
-export default {
+module.exports = {
   /**
    * When existy strict is set to `true`, unless `undefined` values will be
    * considered as non-existy.

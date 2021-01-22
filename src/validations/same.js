@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import existy from '../raw/existy'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const existy = require('../raw/existy')
 
 /**
  * Ensures the value of 2 fields are same.
@@ -19,7 +19,7 @@ import existy from '../raw/existy'
  * }
  * ----
  */
-export default (data, field, message, [targetedField], get) => {
+module.export = (data, field, message, [targetedField], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     const targetedFieldValue = get(data, targetedField)

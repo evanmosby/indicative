@@ -9,12 +9,12 @@
 * file that was distributed with this source code.
 */
 
-import { pope } from 'pope'
-import snakeToCamelCase from './snakeToCamelCase'
+const { pope } = require('pope')
+const snakeToCamelCase = require('./snakeToCamelCase')
 
 /**
  * Returns message for a given field and a validation rule. The priority is
- * defined as follows in order from top to bottom.
+ * defined as follows in order = require(top to bottom.
  *
  * 1. Message for `field.validation`
  * 2. Message for validation
@@ -69,4 +69,4 @@ function getMessage (messages, field, validation, args) {
     : pope(message, { field, validation, argument: args })
 }
 
-export default getMessage
+module.exports = getMessage

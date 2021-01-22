@@ -1,7 +1,7 @@
-import calcUnits from '../../lib/calcUnits'
-import isAfter from './after'
+const calcUnits = require('../../lib/calcUnits')
+const isAfter = require('./after')
 
-export default (input, diffUnit, key) => {
+module.exports = (input, diffUnit, key) => {
   const expectedDate = calcUnits(diffUnit, key, '+')
   return expectedDate ? isAfter(input, expectedDate) : false
 }

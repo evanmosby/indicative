@@ -1,4 +1,4 @@
-import pluralize from 'pluralize'
+const pluralize = require('pluralize')
 
 /**
  * Converts a value to it's plural version. If value is not a string
@@ -18,7 +18,7 @@ import pluralize from 'pluralize'
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (typeof (value) !== 'string') {
     return value
   }

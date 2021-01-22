@@ -9,7 +9,7 @@
 * file that was distributed with this source code.
 */
 
-import config from './config'
+const config = require('./config')
 
 /**
  * Override configuration values
@@ -34,4 +34,4 @@ setConfig.DEFAULTS = Object.keys(config).reduce((result, key) => {
   return result
 }, {})
 
-export default setConfig
+module.exports = setConfig

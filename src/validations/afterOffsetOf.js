@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import afterOffsetOf from '../raw/afterOffsetOf'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const afterOffsetOf = require('../raw/afterOffsetOf')
 
 /**
  * Ensures the date is after a given offset of a given
@@ -32,7 +32,7 @@ import afterOffsetOf from '../raw/afterOffsetOf'
  * }
  * ----
  */
-export default (data, field, message, [diffUnit, key], get) => {
+module.exports = (data, field, message, [diffUnit, key], get) => {
   return toPromise(() => {
     if (!diffUnit || !key) {
       return new Error('afterOffsetOf:make sure to define offset unit and key')

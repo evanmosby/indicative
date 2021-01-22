@@ -1,2 +1,2 @@
-import above from './above'
-export default (input, comparsionInput) => !above(input, comparsionInput)
+const above = require('./above')
+module.exports = (input, comparsionInput) => !above(input, comparsionInput)

@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import alphaNumeric from '../raw/alphaNumeric'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const alphaNumeric = require('../raw/alphaNumeric')
 
 /**
  * Makes sure the field under validation is alpha numeric only.
@@ -20,7 +20,7 @@ import alphaNumeric from '../raw/alphaNumeric'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !alphaNumeric(fieldValue)) {

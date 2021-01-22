@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import json from '../raw/json'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const json = require('../raw/json')
 
 /**
  * Ensures the value of field under validation is safe to be parsed
@@ -20,7 +20,7 @@ import json from '../raw/json'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
 

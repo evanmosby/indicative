@@ -1,12 +1,12 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import before from '../raw/before'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const before = require('../raw/before')
 
 /**
  * Ensures the value of field under validation is before a given
  * date.
  *
- * This method will import link:https://date-fns.org/v1.29.0/docs/isBefore[isBefore] method from date-fns.
+ * This method will const link:https://date-fns.org/v1.29.0/docs/isBefore[isBefore] method from date-fns.
  *
  * [source, js]
  * ----
@@ -22,7 +22,7 @@ import before from '../raw/before'
  * }
  * ----
  */
-export default (data, field, message, [beforeDate], get) => {
+module.export = (data, field, message, [beforeDate], get) => {
   return toPromise(() => {
     if (!beforeDate) {
       return new Error('before:make sure to define the before date')

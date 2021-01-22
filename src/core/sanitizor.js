@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
 */
 
-import clone from 'clone'
-import { prop } from 'pope'
+const clone = require('clone')
+const { prop } = require('pope')
 
-import parse from './parse'
-import snakeToCamelCase from './snakeToCamelCase'
+const parse = require('./parse')
+const snakeToCamelCase = require('./snakeToCamelCase')
 
 /**
  * Returns a boolean on whether param is an
@@ -104,7 +104,7 @@ function sanitizeField (sanitizations, value, rules) {
   return result
 }
 
-export default (sanitizations) => {
+module.exports = (sanitizations) => {
   return {
     sanitize (data, fields) {
       const parsedFields = parse(fields, data)

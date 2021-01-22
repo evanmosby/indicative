@@ -16,7 +16,7 @@
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (!value || value === 'false' || value === '0') {
     return false
   }

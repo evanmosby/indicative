@@ -1,4 +1,4 @@
-import existy from '../raw/existy'
+const existy = require('../raw/existy')
 
 /**
  * Converts empty strings and `undefined` to `null`. It is
@@ -18,7 +18,7 @@ import existy from '../raw/existy'
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (!existy(value)) {
     return null
   }

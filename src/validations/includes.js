@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the value of field under validation contains a given substring.
@@ -18,7 +18,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [substring], get) => {
+module.export = (data, field, message, [substring], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && String(fieldValue).indexOf(substring) === -1) {

@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import alpha from '../raw/alpha'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const alpha = require('../raw/alpha')
 
 /**
  * Makes sure the field under validation is alpha only. The regex used is `/^[a-z]+$/i`.
@@ -19,7 +19,7 @@ import alpha from '../raw/alpha'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !alpha(fieldValue)) {

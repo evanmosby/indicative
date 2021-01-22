@@ -1,1 +1,1 @@
-export { default } from 'date-fns/is_within_range'
+module.exports = require('date-fns/is_within_range')

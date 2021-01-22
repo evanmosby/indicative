@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Makes sure that the value of field under validation is not
@@ -19,7 +19,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [targetedValue], get) => {
+module.export = (data, field, message, [targetedValue], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && targetedValue == fieldValue) { // eslint-disable-line eqeqeq

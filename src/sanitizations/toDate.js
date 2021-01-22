@@ -19,7 +19,7 @@
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (value instanceof Date) {
     return value
   }

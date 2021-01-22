@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensure the value of field under validation starts with a certain substr. This
@@ -19,7 +19,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [substring], get) => {
+module.export = (data, field, message, [substring], get) => {
   return toPromise(() => {
     if (!substring) {
       throw new Error('startsWith:make sure to define the matching substring')

@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import empty from '../raw/empty'
+const toPromise = require('../../lib/toPromise')
+const empty = require('../raw/empty')
 
 /**
  * Ensures the value of field under validation is not empty. All of the following
@@ -24,7 +24,7 @@ import empty from '../raw/empty'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     if (empty(get(data, field))) {
       return message

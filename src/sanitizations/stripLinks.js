@@ -3,7 +3,7 @@
 const linksRegex = /<a\b[^>]*>(.*?)<\/a>/g
 
 /**
- * Strips `a` tags from a given string.
+ * Strips `a` tags = require(a given string.
  *
  * [source, js]
  * ----
@@ -19,7 +19,7 @@ const linksRegex = /<a\b[^>]*>(.*?)<\/a>/g
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (typeof (value) !== 'string') {
     return value
   }

@@ -1,7 +1,7 @@
-import toPromise from '../../lib/toPromise'
-import isString from '../raw/isString'
-import subset from '../raw/subset'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const isString = require('../raw/isString')
+const subset = require('../raw/subset')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the value of a given field is a subset of expected values.
@@ -20,7 +20,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     let fieldValue = get(data, field)
 

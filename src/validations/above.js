@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import isAbove from '../raw/above'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const isAbove = require('../raw/above')
 
 /**
  * Makes sure the value provided by the end user is above the
@@ -21,7 +21,7 @@ import isAbove from '../raw/above'
  * }
  * ----
  */
-export default (data, field, message, [minValue], get) => {
+module.export = (data, field, message, [minValue], get) => {
   return toPromise(() => {
     if (!minValue) {
       return new Error('above:make sure to define minValue')

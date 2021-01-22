@@ -9,7 +9,7 @@
 * file that was distributed with this source code.
 */
 
-import { prop } from 'pope'
+const { prop } = require('pope')
 
 /**
  * This method loops over an array and build properties based upon
@@ -83,4 +83,4 @@ function starToIndex (pairs, data, i, out) {
   return i === pairs.length ? out : starToIndex(pairs, data, i, out)
 }
 
-export default starToIndex
+module.exports = starToIndex

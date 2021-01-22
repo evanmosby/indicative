@@ -1,4 +1,4 @@
-export default (input, intersectionArray) => {
+module.exports = (input, intersectionArray) => {
   if (!Array.isArray(input) || !Array.isArray(intersectionArray)) {
     return false
   }

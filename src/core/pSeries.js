@@ -135,4 +135,4 @@ function pSeries (iterable, bail) {
   return noop(0, bail)
 }
 
-export default pSeries
+module.exports = pSeries

@@ -1,11 +1,11 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import dateFormat from '../raw/dateFormat'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const dateFormat = require('../raw/dateFormat')
 
 /**
  * Ensures the date or date time is valid as the one of the defined formats.
  *
- * This method will import link:https://date-fns.org/v1.29.0/docs/format[format] method from dateFns.
+ * This method will const link:https://date-fns.org/v1.29.0/docs/format[format] method from dateFns.
  *
  * === Note
  * Following steps are performed to strip the timezone from the actual date
@@ -33,7 +33,7 @@ import dateFormat from '../raw/dateFormat'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     if (args.length === 0) {
       throw new Error('dateFormat:make sure to define atleast one date format')

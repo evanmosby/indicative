@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the value of field under validation, passes the regex test. The regex
@@ -23,7 +23,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [regexExp, regexFlags], get) => {
+module.export = (data, field, message, [regexExp, regexFlags], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
 

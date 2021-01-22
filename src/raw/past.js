@@ -1,1 +1,1 @@
-export { default } from 'date-fns/is_past'
+module.exports = require('date-fns/is_past')

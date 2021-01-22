@@ -1,4 +1,4 @@
-import existy from './existy'
+const existy = require('./existy')
 
 /**
  * @description tells whether input is empty or not
@@ -13,7 +13,7 @@ import existy from './existy'
  *    empty(null)
  *    empty(undefined)
  */
-export default (input) => {
+module.exports = (input) => {
   if (!existy(input)) {
     return true
   }

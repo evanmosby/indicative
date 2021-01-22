@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import empty from '../raw/empty'
+const toPromise = require('../../lib/toPromise')
+const empty = require('../raw/empty')
 
 /**
  * The field is checked for required validation, when expected field value is same
@@ -21,7 +21,7 @@ import empty from '../raw/empty'
  * }
  * ----
  */
-export default function (data, field, message, [otherField, expectedValue], get) {
+module.export = function (data, field, message, [otherField, expectedValue], get) {
   return toPromise(() => {
     const otherValue = get(data, otherField)
     if (String(expectedValue) === String(otherValue) && empty(get(data, field))) {

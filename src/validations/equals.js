@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures 2 values are lossely same. This validation will not check for the same type, but
@@ -21,7 +21,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   const targetedValue = args[0]
   return toPromise(() => {
     const fieldValue = get(data, field)

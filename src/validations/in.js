@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import inArray from '../raw/inArray'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const inArray = require('../raw/inArray')
 
 /**
  * Ensures the value of a given field matches one of expected values.
@@ -19,7 +19,7 @@ import inArray from '../raw/inArray'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !inArray(fieldValue, args)) {

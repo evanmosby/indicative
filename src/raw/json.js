@@ -1,4 +1,4 @@
-export default (input) => {
+module.exports = (input) => {
   try {
     const __o__ = JSON.parse(input) || {}
     return !!__o__

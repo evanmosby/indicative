@@ -1,2 +1,2 @@
-import truthy from './truthy'
-export default (input) => !truthy(input)
+const truthy = require('./truthy')
+module.exports = (input) => !truthy(input)

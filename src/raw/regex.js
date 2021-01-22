@@ -1,4 +1,4 @@
-export default (input, regex) => {
+module.exports = (input, regex) => {
   if (regex instanceof RegExp === false) {
     throw new Error('You must pass regex as the 2nd argument')
   }

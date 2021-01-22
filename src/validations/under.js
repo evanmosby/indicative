@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the value of a field is under a certain value. All values
@@ -19,7 +19,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [maxValue], get) => {
+module.export = (data, field, message, [maxValue], get) => {
   return toPromise(() => {
     if (!maxValue) {
       throw new Error('under:make sure to pass the max value')

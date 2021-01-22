@@ -1,2 +1,2 @@
-import isCreditCard from 'validator/lib/isEmail'
-export default (input, options) => isCreditCard(String(input), options)
+const isCreditCard = require('validator/lib/isEmail')
+module.exports = (input, options) => isCreditCard(String(input), options)

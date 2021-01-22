@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import truthy from '../raw/truthy'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const truthy = require('../raw/truthy')
 
 /**
  * Ensures that the field under validation is accepted.
@@ -21,7 +21,7 @@ import truthy from '../raw/truthy'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !truthy(fieldValue)) {

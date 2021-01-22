@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import empty from '../raw/empty'
-import existy from '../raw/existy'
+const toPromise = require('../../lib/toPromise')
+const empty = require('../raw/empty')
+const existy = require('../raw/existy')
 
 /**
  * The field is checked for required validation, when expected field exists or
@@ -24,7 +24,7 @@ import existy from '../raw/existy'
  * }
  * ----
  */
-export default (data, field, message, [whenField, targetValue], get) => {
+module.export = (data, field, message, [whenField, targetValue], get) => {
   return toPromise(() => {
     const whenFieldValue = get(data, whenField)
     const fieldValue = get(data, field)

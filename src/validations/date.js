@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import date from '../raw/date'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const date = require('../raw/date')
 
 /**
  * Ensures the field under validation is a valid date. The value can be a
@@ -22,7 +22,7 @@ import date from '../raw/date'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !date(fieldValue, false)) {

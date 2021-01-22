@@ -1,1 +1,1 @@
-export default (input) => Number(input) % 2 === 0
+module.exports = (input) => Number(input) % 2 === 0

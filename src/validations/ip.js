@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import ip from '../raw/ip'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const ip = require('../raw/ip')
 
 /**
  * Ensures the value is a valid ip address as per `ipv4` and `ipv6` specs.
@@ -19,7 +19,7 @@ import ip from '../raw/ip'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
 

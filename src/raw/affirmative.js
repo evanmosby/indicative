@@ -16,7 +16,7 @@
  *
  *  @return {Boolean}
  */
-export default (input) => {
+module.exports = (input) => {
   if (input === 'A') {
     return true
   }

@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import url from '../raw/url'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const url = require('../raw/url')
 
 /**
  * Ensures the value is a valid URL format.
@@ -19,7 +19,7 @@ import url from '../raw/url'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !url(fieldValue)) {

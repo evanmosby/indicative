@@ -1,4 +1,4 @@
-import slug from '@slynova/slug'
+const slug = require('@slynova/slug')
 
 /**
  * Converts a string to URL friendly slug. If value is not a string, it will be
@@ -32,7 +32,7 @@ import slug from '@slynova/slug'
  * }
  * ----
  */
-export default (value) => {
+module.exports =(value) => {
   if (typeof (value) !== 'string') {
     return value
   }

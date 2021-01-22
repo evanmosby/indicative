@@ -1,1 +1,1 @@
-export default (input) => input instanceof Object && !Array.isArray(input)
+module.exports = (input) => input instanceof Object && !Array.isArray(input)

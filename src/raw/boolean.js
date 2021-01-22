@@ -1,4 +1,4 @@
-export default (input, strict = true) => {
+module.exports = (input, strict = true) => {
   const bools = [true, false, 0, 1]
   if (strict) {
     return bools.indexOf(input) > -1

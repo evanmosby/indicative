@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import email from '../raw/email'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const email = require('../raw/email')
 
 /**
  * Ensures the field under validation is a valid email format.
@@ -21,7 +21,7 @@ import email from '../raw/email'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !email(fieldValue)) {

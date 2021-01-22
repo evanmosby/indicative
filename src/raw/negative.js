@@ -1,2 +1,2 @@
-import positive from './positive'
-export default (input) => !positive(input)
+const positive = require('./positive')
+module.exports = (input) => !positive(input)

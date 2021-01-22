@@ -1,2 +1,2 @@
-import existy from './existy'
-export default (input) => existy(input) && input !== false && input !== 0
+const existy = require('./existy')
+module.exports = (input) => existy(input) && input !== false && input !== 0

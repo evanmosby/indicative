@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import boolean from '../raw/boolean'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const boolean = require('../raw/boolean')
 
 /**
  * Ensures the value of a field is a boolean. Also it will cast following
@@ -28,7 +28,7 @@ import boolean from '../raw/boolean'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !boolean(fieldValue, false)) {

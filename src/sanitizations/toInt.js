@@ -15,7 +15,7 @@
  * }
  * ----
  */
-export default (value, args) => {
+module.exports =(value, args) => {
   const radix = Array.isArray(args) && args[0] ? args[0] : 10
   return parseInt(value, radix)
 }

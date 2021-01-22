@@ -1,5 +1,5 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
 
 /**
  * Ensures the value is a valid integer. Also string representation of a number
@@ -23,7 +23,7 @@ import toPromise from '../../lib/toPromise'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !Number.isInteger(Number(fieldValue))) {

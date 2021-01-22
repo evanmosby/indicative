@@ -1,6 +1,6 @@
-import config from './config'
-import existy from '../raw/existy'
+const config = require('./config')
+const existy = require('../raw/existy')
 
-export default (value) => {
+module.exports = (value) => {
   return config.EXISTY_STRICT ? value === undefined : !existy(value)
 }

@@ -9,13 +9,13 @@
 * file that was distributed with this source code.
 */
 
-import { prop } from 'pope'
+const { prop } = require('pope')
 
-import PLazy from './PLazy'
-import pSeries from './pSeries'
-import parse from './parse'
-import getMessage from './getMessage'
-import snakeToCamelCase from './snakeToCamelCase'
+const PLazy = require('./PLazy')
+const pSeries = require('./pSeries')
+const parse = require('./parse')
+const getMessage = require('./getMessage')
+const snakeToCamelCase = require('./snakeToCamelCase')
 
 /**
  * Returns a lazy promise which runs the validation on a field
@@ -146,7 +146,7 @@ function validate (validations, bail, data, fields, messages, formatter) {
  * // later
  * validatorInstance.validate()
  */
-export default (validations, defaultFormatter) => {
+module.exports = (validations, defaultFormatter) => {
   let message = 'Cannot instantiate validator without'
   if (!validations) {
     throw new Error(`${message} validations`)

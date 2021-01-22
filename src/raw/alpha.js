@@ -1,2 +1,2 @@
 const alphaRegex = /^[a-z]+$/i
-export default (input) => alphaRegex.test(input)
+module.exports = (input) => alphaRegex.test(input)

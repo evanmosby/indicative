@@ -1,4 +1,4 @@
-export default (input) => {
+module.exports = (input) => {
   if (typeof (input) === 'string') {
     return input.trim().length > 0
   }

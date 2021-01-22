@@ -34,4 +34,4 @@ function rule (name, args) {
   return { name, args: !args ? [] : (Array.isArray(args) ? args : [args]) }
 }
 
-export default rule
+module.exports = rule

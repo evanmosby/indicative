@@ -31,7 +31,7 @@
  *   ]
  * }
  */
-export default (value, args) => {
+module.exports =(value, args) => {
   if (typeof value !== 'string') {
     return value
   }

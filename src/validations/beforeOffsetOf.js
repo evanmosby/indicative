@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import beforeOffsetOf from '../raw/beforeOffsetOf'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const beforeOffsetOf = require('../raw/beforeOffsetOf')
 
 /**
  * Ensures the date is before a given offset of a given
@@ -32,7 +32,7 @@ import beforeOffsetOf from '../raw/beforeOffsetOf'
  * }
  * ----
  */
-export default (data, field, message, [diffUnit, key], get) => {
+module.export = (data, field, message, [diffUnit, key], get) => {
   return toPromise(() => {
     if (!diffUnit || !key) {
       return new Error('beforeOffsetOf:make sure to define offset unit and key')

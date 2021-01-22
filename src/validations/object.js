@@ -1,6 +1,6 @@
-import skippable from '../core/skippable'
-import toPromise from '../../lib/toPromise'
-import isObject from '../raw/isObject'
+const skippable =  require('../core/skippable')
+const toPromise = require('../../lib/toPromise')
+const isObject = require('../raw/isObject')
 
 /**
  * Ensures the value of field under validation is a valid Javascript
@@ -22,7 +22,7 @@ import isObject from '../raw/isObject'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !isObject(fieldValue)) {

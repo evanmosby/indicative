@@ -9,9 +9,9 @@
 * file that was distributed with this source code.
 */
 
-import Pipe from 'haye/dist/haye-pipe'
-import ArrayPresenter from 'haye/dist/haye-array-presenter'
-import starToIndex from './starToIndex'
+const Pipe = require('haye/dist/haye-pipe')
+const ArrayPresenter = require('haye/dist/haye-array-presenter')
+const starToIndex = require('./starToIndex')
 
 /**
  * This method parses the rules object into a new object with
@@ -89,4 +89,4 @@ function parseRules (fields, data) {
   }, {})
 }
 
-export default parseRules
+module.exports = parseRules

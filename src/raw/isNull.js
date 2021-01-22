@@ -1,1 +1,1 @@
-export default (input) => input === null
+module.exports = (input) => input === null

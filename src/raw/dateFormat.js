@@ -1,6 +1,6 @@
-import format from 'date-fns/format'
+const format = require('date-fns/format')
 
-export default (input, formats) => {
+module.exports = (input, formats) => {
   return (Array.isArray(formats) ? formats : [formats]).some(pattern => {
     let sanitizedInput = input
     let hasTimeZone = false

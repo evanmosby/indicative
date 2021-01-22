@@ -1,4 +1,4 @@
-export default (input, superset) => {
+module.exports = (input, superset) => {
   if (!Array.isArray(input) || !Array.isArray(superset)) {
     return false
   }

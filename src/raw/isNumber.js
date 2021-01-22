@@ -1,4 +1,4 @@
-export default (input, strict) => {
+module.exports = (input, strict) => {
   const isNumber = typeof input === 'number' && !isNaN(input)
   if (input === true || input === false) return false
   if (!isNumber && !strict) {

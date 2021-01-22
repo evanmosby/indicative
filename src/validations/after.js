@@ -1,12 +1,12 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import after from '../raw/after'
+const toPromise = require('../../lib/toPromise')
+const skippable = require('../core/skippable')
+const after = require('../raw/after')
 
 /**
  * Ensures the value of the field is after the expected
  * date.
  *
- * This method will import link:https://date-fns.org/docs/isAfter[isAfter] function of date-fns.
+ * This method will const link:https://date-fns.org/docs/isAfter[isAfter] function of date-fns.
  *
  * [source, js]
  * ----
@@ -22,7 +22,7 @@ import after from '../raw/after'
  * }
  * ----
  */
-export default (data, field, message, [afterDate], get) => {
+module.exports = (data, field, message, [afterDate], get) => {
   return toPromise(() => {
     if (!afterDate) {
       return new Error('after:make sure to define the after date')

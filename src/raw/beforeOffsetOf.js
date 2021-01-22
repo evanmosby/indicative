@@ -1,7 +1,7 @@
-import calcUnits from '../../lib/calcUnits'
-import isBefore from './before'
+const calcUnits = require('../../lib/calcUnits')
+const isBefore = require('./before')
 
-export default (input, diffUnit, key) => {
+module.exports = (input, diffUnit, key) => {
   const expectedDate = calcUnits(diffUnit, key, '-')
   return expectedDate ? isBefore(input, expectedDate) : false
 }

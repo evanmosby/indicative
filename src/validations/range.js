@@ -1,7 +1,7 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import between from '../raw/between'
-import isNull from '../raw/isNull'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const between = require('../raw/between')
+const isNull = require('../raw/isNull')
 
 /**
  * Ensures the value of field under validation is under a given range. The values will
@@ -21,7 +21,7 @@ import isNull from '../raw/isNull'
  * }
  * ----
  */
-export default (data, field, message, [min, max], get) => {
+module.export = (data, field, message, [min, max], get) => {
   return toPromise(() => {
     if ([min, max].some(value => isNull(value) || isNaN(value))) {
       return new Error('range:min and max values are required for range validation')

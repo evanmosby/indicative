@@ -9,4 +9,4 @@
  *
  * @return {Boolean}
  */
-export default (input, comparsionInput) => Number(input) > Number(comparsionInput)
+module.exports = (input, comparsionInput) => Number(input) > Number(comparsionInput)

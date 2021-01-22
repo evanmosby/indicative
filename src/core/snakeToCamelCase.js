@@ -9,6 +9,6 @@
 * file that was distributed with this source code.
 */
 
-export default (str) => {
+module.exports = (str) => {
   return str.replace(/_(\w)/g, (match, group) => group.toUpperCase())
 }

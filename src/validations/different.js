@@ -1,5 +1,5 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
 
 /**
  * Ensures the value of the field under validation is always different from
@@ -19,7 +19,7 @@ import skippable from '../core/skippable'
  * }
  * ----
  */
-export default (data, field, message, [targetedField], get) => {
+module.export = (data, field, message, [targetedField], get) => {
   return toPromise(() => {
     if (!targetedField) {
       throw new Error('different:make sure to define target field for comparison')

@@ -1,6 +1,6 @@
-import toPromise from '../../lib/toPromise'
-import skippable from '../core/skippable'
-import isString from '../raw/isString'
+const toPromise = require('../../lib/toPromise')
+const skippable =  require('../core/skippable')
+const isString = require('../raw/isString')
 
 /**
  * Ensures the value is a string
@@ -19,7 +19,7 @@ import isString from '../raw/isString'
  * }
  * ----
  */
-export default (data, field, message, args, get) => {
+module.export = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !isString(fieldValue)) {

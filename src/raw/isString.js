@@ -1,1 +1,1 @@
-export default (input) => typeof (input) === 'string'
+module.exports = (input) => typeof (input) === 'string'

@@ -1,2 +1,2 @@
-import even from './even'
-export default (input) => !even(input)
+const even = require('./even')
+module.exports = (input) => !even(input)

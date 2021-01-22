@@ -1,1 +1,1 @@
-export default (input, comparsionInput) => input === comparsionInput
+module.exports = (input, comparsionInput) => input === comparsionInput

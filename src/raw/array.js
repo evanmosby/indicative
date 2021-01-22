@@ -1,1 +1,1 @@
-export default (value) => Array.isArray(value)
+module.exports = (value) => Array.isArray(value)

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
 */
 
-import validator from './src/core/validator'
-import sanitizor from './src/core/sanitizor'
-import * as validations from './src/validations'
-import * as sanitizations from './src/sanitizations'
-import * as raw from './src/raw'
-import * as formatters from './src/formatters'
-import rule from './src/core/rule'
-import configure from './src/core/configure'
-import config from './src/core/config'
+const validator = require('./src/core/validator')
+const sanitizor = require('./src/core/validator')
+const validations = require('./src/validations')
+const sanitizations = require('./src/sanitizations')
+const raw = require('./src/raw')
+const formatters = require('./src/formatters')
+const rule = require('./src/core/rule')
+const configure = require('./src/core/configure')
+const config = require('./src/core/config')
 
 /**
  * Named exports are freezed and hence we need to create
@@ -38,7 +38,7 @@ const sanitizationsCopy = Object.keys(sanitizations).reduce((result, name) => {
   return result
 }, {})
 
-export default {
+module.exports = {
   validate: (...args) => {
     return validator(validationsCopy, config.FORMATTER || formatters.Vanilla).validate(...args)
   },

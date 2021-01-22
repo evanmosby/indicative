@@ -1,4 +1,4 @@
-import striptags from 'striptags'
+const striptags = require('striptags')
 
 /**
  * Strips HTML tags from a string. If value is not a string, it will be returned
@@ -34,7 +34,7 @@ import striptags from 'striptags'
  * }
  * ----
  */
-export default (value, args) => {
+module.exports =(value, args) => {
   if (typeof (value) !== 'string') {
     return value
   }

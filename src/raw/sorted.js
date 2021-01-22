@@ -1,4 +1,4 @@
-export default (input) => {
+module.exports = (input) => {
   if (!Array.isArray(input)) {
     return false
   }

@@ -1,4 +1,4 @@
-import normalizeEmail from 'validator/lib/normalizeEmail'
+const normalizeEmail = require('validator/lib/normalizeEmail')
 
 /**
  * Normalizes the email address by removing unwanted characters from it. For example
@@ -27,7 +27,7 @@ import normalizeEmail from 'validator/lib/normalizeEmail'
  * }
  * ----
  */
-export default (email, args) => {
+module.exports =(email, args) => {
   if (typeof (email) === 'string') {
     const options = args && args.length ? args[0] : {}
     return normalizeEmail(email, options)

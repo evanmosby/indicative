@@ -1,4 +1,4 @@
-export default (input, strict = true) => {
+module.exports = (input, strict = true) => {
   if (input instanceof Date === true) {
     return true
   }
