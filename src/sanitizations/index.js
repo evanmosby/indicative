@@ -7,18 +7,18 @@
  * file that was distributed with this source code.
 */
 module.exports = {
-normalizeEmail : './normalizeEmail',
-stripTags : './stripTags',
-toBoolean : './toBoolean',
-toNull : './toNull',
-toInt : './toInt',
-toDate : './toDate',
-plural : './plural',
-singular : './singular',
-slug : './slug',
-escape : './escape',
-stripLinks : './stripLinks',
-trim : './trim',
-lowerCase : './lowerCase',
-upperCase : './upperCase'
+normalizeEmail : require('./normalizeEmail'),
+stripTags : require('./stripTags'),
+toBoolean : require('./toBoolean'),
+toNull : require('./toNull'),
+toInt : require('./toInt'),
+toDate : require('./toDate'),
+plural : require('./plural'),
+singular : require('./singular'),
+slug : require('./slug'),
+escape : require('./escape'),
+stripLinks : require('./stripLinks'),
+trim : require('./trim'),
+lowerCase : require('./lowerCase'),
+upperCase : require('./upperCase')
 }

@@ -10,7 +10,7 @@
 */
 
 const validator = require('./src/core/validator')
-const sanitizor = require('./src/core/validator')
+const sanitizor = require('./src/core/sanitizor')
 const validations = require('./src/validations')
 const sanitizations = require('./src/sanitizations')
 const raw = require('./src/raw')
