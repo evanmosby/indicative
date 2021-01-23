@@ -62,7 +62,8 @@
   },
   "dependencies": {
     "date-fns": "^1.29.0",
-    "pope": "^2.0.2"
+    "pope": "^2.0.2",
+    "validator": "^10.5.0"
   },
   "directories": {
     "lib": "lib",
