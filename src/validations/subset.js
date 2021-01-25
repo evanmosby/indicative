@@ -20,7 +20,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     let fieldValue = get(data, field)
 

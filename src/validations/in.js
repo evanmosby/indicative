@@ -19,7 +19,7 @@ const inArray = require('../raw/inArray')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !inArray(fieldValue, args)) {

@@ -19,7 +19,7 @@ const existy = require('../raw/existy')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const missingAnyField = args.some((item) => !existy(get(data, item)))
     if (!missingAnyField && empty(get(data, field))) {

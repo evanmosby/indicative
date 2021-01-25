@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
 */
 
-module.export = {
+module.exports = {
   above : require('./above'),
   accepted : require('./accepted'),
   alpha : require('./alpha'),

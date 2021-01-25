@@ -20,7 +20,7 @@ const json = require('../raw/json')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
 

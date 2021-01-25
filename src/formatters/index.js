@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
 */
 
-module.export = {
+module.exports = {
     Vanilla : require('./Vanilla'),
     JsonApi : require('./JsonApi')
 }

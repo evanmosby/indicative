@@ -22,7 +22,7 @@ const date = require('../raw/date')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !date(fieldValue, false)) {

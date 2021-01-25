@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [minLength], get) => {
+module.exports = (data, field, message, [minLength], get) => {
   return toPromise(() => {
     if (!minLength) {
       throw new Error('min:make sure to define min length')

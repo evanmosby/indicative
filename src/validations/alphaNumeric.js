@@ -20,7 +20,7 @@ const alphaNumeric = require('../raw/alphaNumeric')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !alphaNumeric(fieldValue)) {

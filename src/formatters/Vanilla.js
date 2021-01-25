@@ -63,4 +63,4 @@ VanillaFormatter.prototype.toJSON = function () {
   return this.errors.length ? this.errors : null
 }
 
-module.export = VanillaFormatter
+module.exports = VanillaFormatter

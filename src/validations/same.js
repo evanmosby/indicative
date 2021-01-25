@@ -19,7 +19,7 @@ const existy = require('../raw/existy')
  * }
  * ----
  */
-module.export = (data, field, message, [targetedField], get) => {
+module.exports = (data, field, message, [targetedField], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     const targetedFieldValue = get(data, targetedField)

@@ -22,7 +22,7 @@ const before = require('../raw/before')
  * }
  * ----
  */
-module.export = (data, field, message, [beforeDate], get) => {
+module.exports = (data, field, message, [beforeDate], get) => {
   return toPromise(() => {
     if (!beforeDate) {
       return new Error('before:make sure to define the before date')

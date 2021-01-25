@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [targetedField], get) => {
+module.exports = (data, field, message, [targetedField], get) => {
   return toPromise(() => {
     if (!targetedField) {
       throw new Error('different:make sure to define target field for comparison')

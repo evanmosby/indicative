@@ -21,7 +21,7 @@ const empty = require('../raw/empty')
  * }
  * ----
  */
-module.export = function (data, field, message, [otherField, expectedValue], get) {
+module.exports = function (data, field, message, [otherField, expectedValue], get) {
   return toPromise(() => {
     const otherValue = get(data, otherField)
     if (String(expectedValue) === String(otherValue) && empty(get(data, field))) {

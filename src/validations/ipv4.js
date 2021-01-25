@@ -19,7 +19,7 @@ const ipv4 = require('../raw/ipv4')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !ipv4(fieldValue)) {

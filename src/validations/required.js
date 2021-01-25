@@ -24,7 +24,7 @@ const empty = require('../raw/empty')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     if (empty(get(data, field))) {
       return message

@@ -21,7 +21,7 @@ const isAbove = require('../raw/above')
  * }
  * ----
  */
-module.export = (data, field, message, [minValue], get) => {
+module.exports = (data, field, message, [minValue], get) => {
   return toPromise(() => {
     if (!minValue) {
       return new Error('above:make sure to define minValue')

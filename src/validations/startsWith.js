@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [substring], get) => {
+module.exports = (data, field, message, [substring], get) => {
   return toPromise(() => {
     if (!substring) {
       throw new Error('startsWith:make sure to define the matching substring')

@@ -19,7 +19,7 @@ const isString = require('../raw/isString')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && !isString(fieldValue)) {

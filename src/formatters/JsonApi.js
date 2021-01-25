@@ -69,4 +69,4 @@ JsonApiFormatter.prototype.toJSON = function () {
   } : null
 }
 
-module.export = JsonApiFormatter
+module.exports = JsonApiFormatter

@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [targetedValue], get) => {
+module.exports = (data, field, message, [targetedValue], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     if (!skippable(fieldValue) && targetedValue == fieldValue) { // eslint-disable-line eqeqeq

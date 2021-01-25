@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [maxValue], get) => {
+module.exports = (data, field, message, [maxValue], get) => {
   return toPromise(() => {
     if (!maxValue) {
       throw new Error('under:make sure to pass the max value')

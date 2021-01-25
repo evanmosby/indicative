@@ -19,7 +19,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [maxLength], get) => {
+module.exports = (data, field, message, [maxLength], get) => {
   return toPromise(() => {
     if (!maxLength) {
       throw new Error('max:make sure to define max length')

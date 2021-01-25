@@ -32,7 +32,7 @@ const beforeOffsetOf = require('../raw/beforeOffsetOf')
  * }
  * ----
  */
-module.export = (data, field, message, [diffUnit, key], get) => {
+module.exports = (data, field, message, [diffUnit, key], get) => {
   return toPromise(() => {
     if (!diffUnit || !key) {
       return new Error('beforeOffsetOf:make sure to define offset unit and key')

@@ -33,7 +33,7 @@ const dateFormat = require('../raw/dateFormat')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     if (args.length === 0) {
       throw new Error('dateFormat:make sure to define atleast one date format')

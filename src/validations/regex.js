@@ -23,7 +23,7 @@ const skippable =  require('../core/skippable')
  * }
  * ----
  */
-module.export = (data, field, message, [regexExp, regexFlags], get) => {
+module.exports = (data, field, message, [regexExp, regexFlags], get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
 

@@ -21,7 +21,7 @@ const isNull = require('../raw/isNull')
  * }
  * ----
  */
-module.export = (data, field, message, [min, max], get) => {
+module.exports = (data, field, message, [min, max], get) => {
   return toPromise(() => {
     if ([min, max].some(value => isNull(value) || isNaN(value))) {
       return new Error('range:min and max values are required for range validation')

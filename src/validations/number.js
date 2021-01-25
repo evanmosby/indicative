@@ -22,7 +22,7 @@ const isNumber = require('../raw/isNumber')
  * }
  * ----
  */
-module.export = (data, field, message, args, get) => {
+module.exports = (data, field, message, args, get) => {
   return toPromise(() => {
     const fieldValue = get(data, field)
     const transformedValue = typeof (fieldValue) === 'string' ? Number(fieldValue) : fieldValue
