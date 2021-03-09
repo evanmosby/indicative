@@ -1,6 +1,6 @@
 module.exports = (input) => {
-  if (typeof (input) === 'string') {
-    return input.trim().length > 0
+  if (typeof input === "string") {
+    return input.trim().length >= 0;
   }
-  return (input !== null && input !== undefined)
-}
+  return input !== null && input !== undefined;
+};
