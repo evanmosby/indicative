@@ -1,7 +1,6 @@
 module.exports = (input) => {
   if (typeof input === "string") {
-    console.log("in existy.string");
-    return input.trim().length >= 0;
+    return input.trim().length >= 0; // accept empty strings
   }
   return input !== null && input !== undefined;
 };
